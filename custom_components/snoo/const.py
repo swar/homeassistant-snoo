@@ -1,3 +1,3 @@
-"""Constants for the Happiest Baby Snoo Smart Bassinet integration."""
+"""Constants for the Happiest Baby SNOO Smart Bassinet integration."""
 
 DOMAIN = "snoo"

@@ -1,4 +1,4 @@
-"""Snoo sensor."""
+"""SNOO sensor."""
 import logging
 
 from enum import Enum
@@ -31,7 +31,7 @@ class SnooStateSensor(Entity):
     @property
     def name(self):
         """Return the name of the sensor."""
-        return "Snoo state"
+        return "SNOO State"
 
     @property
     def state(self):

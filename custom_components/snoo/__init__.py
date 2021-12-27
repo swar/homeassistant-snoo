@@ -1,4 +1,4 @@
-"""The Happiest Baby Snoo Smart Bassinet integration."""
+"""The Happiest Baby SNOO Smart Bassinet integration."""
 import asyncio
 
 import voluptuous as vol
@@ -14,13 +14,13 @@ PLATFORMS = ["sensor"]
 
 
 async def async_setup(hass: HomeAssistant, config: dict):
-    """Set up the Happiest Baby Snoo Smart Bassinet componet."""
+    """Set up the Happiest Baby SNOO Smart Bassinet componet."""
     hass.data[DOMAIN] = {}
     return True
 
 
 async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry):
-    """Set up Happiest Baby Snoo Smart Bassinet from a config entry."""
+    """Set up Happiest Baby SNOO Smart Bassinet from a config entry."""
     hass.data[DOMAIN][entry.entry_id] = Snoo()
 
     for component in PLATFORMS:
