@@ -9,15 +9,16 @@ from snoo import Client
 
 _LOGGER = logging.getLogger(__name__)
 
-async def async_setup_platform(
-        hass, config, async_add_entries, discovery_info=None):
+
+async def async_setup_platform(hass, config, async_add_entries, discovery_info=None):
     """Set up the sensor platform."""
     async_add_entities([SnoostateSensor()])
 
-async def async_setup_entry(
-        hass, config_entry, async_add_devices):
+
+async def async_setup_entry(hass, config_entry, async_add_devices):
     """Set up the sensor platform"""
     async_add_devices([SnooStateSensor()])
+
 
 class SnooStateSensor(Entity):
     """Representation of the Snoo status."""
@@ -53,10 +54,7 @@ class SnooStateSensor(Entity):
         #   Contains the time the current wake or sleep session started.
         #   Note that only changes to or from awake are tracked here;
         #   transitions between soothing and sleep phases are ignored.
-        self._attributes = {
-            "level": 0,
-            "session_start_time": ""
-        }
+        self._attributes = {"level": 0, "session_start_time": ""}
 
     def update(self):
         """Fetch new state data for the sensor."""

@@ -12,10 +12,12 @@ CONFIG_SCHEMA = vol.Schema({DOMAIN: vol.Schema({})}, extra=vol.ALLOW_EXTRA)
 
 PLATFORMS = ["sensor"]
 
+
 async def async_setup(hass: HomeAssistant, config: dict):
     """Set up the Happiest Baby Snoo Smart Bassinet componet."""
     hass.data[DOMAIN] = {}
     return True
+
 
 async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry):
     """Set up Happiest Baby Snoo Smart Bassinet from a config entry."""
@@ -27,6 +29,7 @@ async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry):
         )
 
     return True
+
 
 async def async_unload_entry(hass: HomeAssistant, entry: ConfigEntry):
     """Unload a config entry."""
@@ -42,6 +45,7 @@ async def async_unload_entry(hass: HomeAssistant, entry: ConfigEntry):
         hass.data[DOMAIN].pop(entry.entry_id)
 
     return unload_ok
+
 
 class Snoo:
     """Representation of a Snoo bassinet."""
