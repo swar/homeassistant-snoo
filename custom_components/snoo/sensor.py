@@ -10,9 +10,9 @@ from snoo import Client
 _LOGGER = logging.getLogger(__name__)
 
 
-async def async_setup_platform(hass, config, async_add_entries, discovery_info=None):
+async def async_setup_platform(hass, config, async_add_entities, discovery_info=None):
     """Set up the sensor platform."""
-    async_add_entities([SnoostateSensor()])
+    async_add_entities([SnooStateSensor()])
 
 
 async def async_setup_entry(hass, config_entry, async_add_devices):
