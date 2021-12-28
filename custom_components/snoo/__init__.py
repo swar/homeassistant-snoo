@@ -14,7 +14,7 @@ PLATFORMS = ["sensor"]
 
 
 async def async_setup(hass: HomeAssistant, config: dict):
-    """Set up the Happiest Baby SNOO Smart Bassinet componet."""
+    """Set up the Happiest Baby SNOO Smart Bassinet component."""
     hass.data[DOMAIN] = {}
     return True
 
